@@ -113,7 +113,7 @@ export default function App() {
           ))}
           <a
             className="resume-link"
-            href="https://drive.google.com/file/d/1IAEXZ7E9A45bBxFj9r_tGwTdhOfoNsaK/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tWoGrVkJu_3v03KGwF2ElKEM64WmufM-/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
