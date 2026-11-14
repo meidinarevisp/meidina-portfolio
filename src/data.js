@@ -4,8 +4,8 @@ export const profile = {
   location: "Sleman, Yogyakarta 55283",
   phone: "+62 818-1829-4515",
   email: "revimeidina72@gmail.com",
-  github: "https://github.com",
-  linkedin: "https://www.linkedin.com",
+  github: "https://github.com/meidinarevisp",
+  linkedin: "https://www.linkedin.com/in/meidinarevisp",
 };
 
 export const marqueeItems = [

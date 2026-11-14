@@ -1,4 +1,5 @@
 import Keyboard from "./Keyboard.jsx";
+import LocalTime from "./LocalTime.jsx";
 import { profile } from "../data.js";
 
 export default function Hero({ darkMode, onToggleTheme }) {
@@ -32,21 +33,29 @@ export default function Hero({ darkMode, onToggleTheme }) {
       <div className="kb-floor" aria-hidden="true" />
       <Keyboard />
       <div className="h-title">
-        <div className="h-line">SEO Content Writer</div>
         <div className="h-line">
-          Web &amp; Mobile Developer
-          <span className="caret" aria-hidden="true" />
+          <span className="typing-line typing-first">SEO Content Writer</span>
+        </div>
+        <div className="h-line">
+          <span className="typing-line typing-second">
+            Web &amp; Mobile Developer
+            <span className="caret" aria-hidden="true" />
+          </span>
         </div>
         <div className="h-sub">
           Based in {profile.location.split(",")[0]}, Yogyakarta &mdash; Crafting
           Words &amp; Code
         </div>
+        <LocalTime />
       </div>
       <div className="h-hint">
         Scroll to explore{" "}
         <span className="arrow" aria-hidden="true">
           &#8595;
         </span>
+      </div>
+      <div className="kb-hint" data-text="Press a key — it scrolls the page">
+        Press a key &mdash; it scrolls the page
       </div>
     </section>
   );

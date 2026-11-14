@@ -78,7 +78,6 @@ export default function Keyboard() {
           </div>
         </div>
       </div>
-      <div className="kb-hint">Press a key &mdash; it scrolls the page</div>
     </div>
   );
 }
