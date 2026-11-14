@@ -304,13 +304,13 @@ section[id] {
     linear-gradient(158deg, #f8d2d7 0%, #f2afba 48%, #e998a6 100%);
 }
 .hanging-lamp {
-  --lamp-x: clamp(36px, 5vw, 76px);
+  --lamp-x: clamp(42px, 6vw, 88px);
   position: absolute;
   top: 0;
   right: var(--lamp-x);
   z-index: 8;
-  width: clamp(92px, 10vw, 148px);
-  height: min(82svh, 760px);
+  width: clamp(78px, 8.5vw, 124px);
+  height: min(64svh, 590px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -340,7 +340,7 @@ section[id] {
   filter: drop-shadow(0 28px 30px rgba(89, 27, 48, 0.28));
 }
 .hanging-lamp:hover .lamp-cord {
-  height: calc(78% + 24px);
+  height: calc(57% + 24px);
 }
 .hanging-lamp:hover .lamp-canopy {
   transform: translate(-50%, calc(-50% + 18px));
@@ -360,7 +360,7 @@ section[id] {
   top: -24px;
   left: 50%;
   width: 7px;
-  height: calc(73% + 24px);
+  height: calc(54% + 24px);
   transform: translateX(-50%);
   border-radius: 999px;
   background: linear-gradient(90deg, #2b1720 0%, #76515b 42%, #180d13 100%);
@@ -371,7 +371,7 @@ section[id] {
 }
 .lamp-canopy {
   position: absolute;
-  top: 70%;
+  top: 52%;
   left: 50%;
   width: 74%;
   height: 30px;
@@ -385,7 +385,7 @@ section[id] {
 }
 .lamp-fitting {
   position: absolute;
-  top: calc(70% + 8px);
+  top: calc(52% + 8px);
   left: 50%;
   width: 44%;
   height: 52px;
@@ -399,7 +399,7 @@ section[id] {
 }
 .lamp-bulb {
   position: absolute;
-  top: calc(70% + 48px);
+  top: calc(52% + 48px);
   left: 50%;
   width: 88%;
   aspect-ratio: 1;
@@ -2903,9 +2903,9 @@ html[data-theme="dark"] .footer a {
 
 @media (max-width: 700px) {
   .hanging-lamp {
-    --lamp-x: 10px;
-    width: clamp(70px, 18vw, 96px);
-    height: 78svh;
+    --lamp-x: 12px;
+    width: clamp(64px, 15vw, 82px);
+    height: 52svh;
     opacity: 0.92;
   }
   .kb-hint,

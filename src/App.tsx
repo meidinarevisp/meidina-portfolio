@@ -5,7 +5,7 @@ import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import { Marquee } from "./components/shared.jsx";
-import { navItems } from "./data.js";
+import { navItems, profile } from "./data.js";
 
 function Logo() {
   return (
@@ -47,20 +47,33 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    const topSection = document.getElementById("top");
     const sections = navItems
       .map((n: { id: string; label: string }) => document.getElementById(n.id))
       .filter(Boolean) as Element[];
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
+          if (e.isIntersecting) {
+            setActive(e.target.id === "top" ? "" : e.target.id);
+          }
         });
       },
       { rootMargin: "-42% 0px -52% 0px" },
     );
+    if (topSection) io.observe(topSection);
     sections.forEach((s: Element) => io.observe(s));
     return () => io.disconnect();
   }, []);
+
+  useEffect(() => {
+    const section = navItems.find(
+      (item: { id: string; label: string }) => item.id === active,
+    );
+    document.title = section
+      ? `${section.label} | ${profile.name}`
+      : `${profile.name} | Portfolio`;
+  }, [active]);
 
   useEffect(() => {
     const finePointer = window.matchMedia("(pointer: fine)");
